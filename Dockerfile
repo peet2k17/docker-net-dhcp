@@ -12,6 +12,7 @@ RUN mkdir bin/ && go build -o bin/ ./cmd/...
 FROM alpine:3.14
 
 RUN mkdir -p /run/docker/plugins
+COPY config.json /run/docker/plugins/
 
 COPY --from=builder /usr/local/src/docker-net-dhcp/bin/net-dhcp /usr/sbin/
 COPY --from=builder /usr/local/src/docker-net-dhcp/bin/udhcpc-handler /usr/lib/net-dhcp/udhcpc-handler
