@@ -1,5 +1,5 @@
 PLUGIN_NAME = ghcr.io/peet2k17/docker-net-dhcp
-PLUGIN_TAG ?= golang
+PLUGIN_TAG ?= release-linux-amd64
 PLATFORMS ?= linux/amd64,linux/arm64
 
 SOURCES = $(shell find pkg/ cmd/ -name '*.go')
