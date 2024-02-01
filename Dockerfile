@@ -13,6 +13,7 @@ FROM alpine:3.14
 
 RUN mkdir -p /run/docker/plugins
 COPY config.json ./
+RUN ls -al ./
 
 COPY --from=builder /usr/local/src/docker-net-dhcp/bin/net-dhcp /usr/sbin/
 COPY --from=builder /usr/local/src/docker-net-dhcp/bin/udhcpc-handler /usr/lib/net-dhcp/udhcpc-handler
